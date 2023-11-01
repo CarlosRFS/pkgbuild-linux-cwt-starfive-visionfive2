@@ -78,7 +78,7 @@ prepare() {
   echo "Setting config..."
   cp ../config .config
   mkdir $srcdir/linux-VF2_v3.7.5/lib/firmware/
-  cp -R ../../radeon ./
+  cp -R ../../radeon $srcdir/linux-VF2_v3.7.5/lib/firmware
   make -j $(nproc) LLVM=1 ARCH=riscv CC="clang ${_target} -mcpu=sifive-u74 -mtune=sifive-7-series" olddefconfig
   cp .config ../../config.new
 
