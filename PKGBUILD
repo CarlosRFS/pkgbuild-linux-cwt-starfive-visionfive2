@@ -61,7 +61,6 @@ else
 fi
 
 prepare() {
-  cp -R ../../radeon /lib/firmware/
   cd $_srcname
 
   local src
